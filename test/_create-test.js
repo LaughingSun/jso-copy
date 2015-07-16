@@ -1,5 +1,5 @@
 var assert = require('assert')
-  , _create = require('../src/copy.js')._create
+  , _create = require('../src/copy.js').create
   , getDesc = Object.getOwnPropertyDescriptor
   , testdata, i, d
 

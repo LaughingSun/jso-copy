@@ -74,6 +74,56 @@ var toTest = require('./lib/do-test.js')
     ]
   }
 
+  , "copy.clone": {
+    method: copy.clone
+    , data: [
+      {args: [{a:1, b:2, c:3}]}
+      , {args: [[0,1,2,3,4,5,6,7,8,9]]}
+      , {args: [/\w+/gim]}
+      , {args: [new Date]}
+      , {args: [new Map]}
+      , {args: [new Set]}
+      , {args: [1]}
+      , {args: [1.1]}
+      , {args: ['a string']}
+      , {args: [true]}
+      , {args: [[[0,1,2,3,4],[5,6,7,8,9]]]}
+      , {args: [{first: {a:1, b:2, c:3}, second: {a:4, b:5, c:6}}]}
+      , {args: [[c = [0,1,2,3,4], c]]}
+      , {args: [{first: c = {a:1, b:2, c:3}, second: c}]}
+
+      , {args: [{a:1, b:2, c:3}, 1]}
+      , {args: [[0,1,2,3,4,5,6,7,8,9], 1]}
+      , {args: [/\w+/gim, 1]}
+      , {args: [new Date, 1]}
+      , {args: [new Map, 1]}
+      , {args: [new Set, 1]}
+      , {args: [1, 1]}
+      , {args: [1.1, 1]}
+      , {args: ['a string', 1]}
+      , {args: [true, 1]}
+      , {args: [[[0,1,2,3,4],[5,6,7,8,9]], 1]}
+      , {args: [{first: {a:1, b:2, c:3}, second: {a:4, b:5, c:6}}, 1]}
+      , {args: [[c = [0,1,2,3,4], c], 1]}
+      , {args: [{first: c = {a:1, b:2, c:3}, second: c}, 1]}
+
+      , {args: [{a:1, b:2, c:3}, -1]}
+      , {args: [[0,1,2,3,4,5,6,7,8,9], -1]}
+      , {args: [/\w+/gim, -1]}
+      , {args: [new Date, -1]}
+      , {args: [new Map, -1]}
+      , {args: [new Set, -1]}
+      , {args: [1, -1]}
+      , {args: [1.1, -1]}
+      , {args: ['a string', -1]}
+      , {args: [true, -1]}
+      , {args: [[[0,1,2,3,4],[5,6,7,8,9]], -1]}
+      , {args: [{first: {a:1, b:2, c:3}, second: {a:4, b:5, c:6}}, -1]}
+      , {args: [[c = [0,1,2,3,4], c], -1]}
+      , {args: [{first: c = {a:1, b:2, c:3}, second: c}, -1]}
+    ]
+  }
+
   , "merge": {
     method: merge
     , data: [
@@ -82,29 +132,10 @@ var toTest = require('./lib/do-test.js')
       , {args: [new Date, new Date]}
       , {args: [new Map, new Map]}
       , {args: [new Set, new Set]}
-      , {args: [1, {}]}
-      , {args: [1.1, {}]}
-      , {args: ['a string', {}]}
-      , {args: [true, {}]}
-      , {args: [[[0,1,2,3,4],[5,6,7,8,9]], []]}
-      , {args: [{first: {a:1, b:2, c:3}, second: {a:4, b:5, c:6}}, {}]}
-      , {args: [[c = [0,1,2,3,4], c], []]}
-      , {args: [{first: c = {a:1, b:2, c:3}, second: c}, {}]}
-    ]
-  }
-
-  , "merge.deep": {
-    method: merge.deep
-    , data: [
-      {args: [{a:1, b:2, c:3}, {}]}
-      , {args: [[0,1,2,3,4,5,6,7,8,9], []]}
-      , {args: [new Date, new Date]}
-      , {args: [new Map, new Map]}
-      , {args: [new Set, new Set]}
-      , {args: [1]}
-      , {args: [1.1]}
-      , {args: ['a string']}
-      , {args: [true]}
+      , {args: [1, 1]}
+      , {args: [1.1, 1.1]}
+      , {args: ['a string', 'a string']}
+      , {args: [true, true]}
       , {args: [[[0,1,2,3,4],[5,6,7,8,9]], []]}
       , {args: [{first: {a:1, b:2, c:3}, second: {a:4, b:5, c:6}}, {}]}
       , {args: [[c = [0,1,2,3,4], c], []]}
@@ -115,10 +146,10 @@ var toTest = require('./lib/do-test.js')
       , {args: [new Date, new Date, 1]}
       , {args: [new Map, new Map, 1]}
       , {args: [new Set, new Set, 1]}
-      , {args: [1, 1]}
-      , {args: [1.1, 1]}
-      , {args: ['a string', 1]}
-      , {args: [true, 1]}
+      , {args: [1, 1, 1]}
+      , {args: [1.1, 1.1, 1]}
+      , {args: ['a string', 'a string', 1]}
+      , {args: [true, true, 1]}
       , {args: [[[0,1,2,3,4],[5,6,7,8,9]], [], 1]}
       , {args: [{first: {a:1, b:2, c:3}, second: {a:4, b:5, c:6}}, {}, 1]}
       , {args: [[c = [0,1,2,3,4], c], [], 1]}
@@ -129,10 +160,10 @@ var toTest = require('./lib/do-test.js')
       , {args: [new Date, new Date, -1]}
       , {args: [new Map, new Map, -1]}
       , {args: [new Set, new Set, -1]}
-      , {args: [1, -1]}
-      , {args: [1.1, -1]}
-      , {args: ['a string', -1]}
-      , {args: [true, -1]}
+      , {args: [1, 1, -1]}
+      , {args: [1.1, 1.1, -1]}
+      , {args: ['a string', 'a string', -1]}
+      , {args: [true, true, -1]}
       , {args: [[[0,1,2,3,4],[5,6,7,8,9]], [], -1]}
       , {args: [{first: {a:1, b:2, c:3}, second: {a:4, b:5, c:6}}, {}, -1]}
       , {args: [[c = [0,1,2,3,4], c], [], -1]}

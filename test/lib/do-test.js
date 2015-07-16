@@ -35,12 +35,12 @@ function doTest (methname, method, cases) {
     var a, b, c
     ; it('should be a function', function(){
       assert.equal(typeof method, 'function', [methname, ' is missing or not a function'].join(''))
-      ; if (typeof method !== 'function') return
-      ; for (i = 0; i < cases.length; i++) {
-        c = cases[i]
-        ; doTestCase(methname, method, c.args, c.afterfn, c.aftera, c.afterb)
-      }
     })
+    ; if (typeof method !== 'function') return
+    ; for (i = 0; i < cases.length; i++) {
+      c = cases[i]
+      ; doTestCase(methname, method, c.args, c.afterfn, c.aftera, c.afterb)
+    }
   })
 }
 
@@ -88,7 +88,7 @@ function doTestCase (methname, method, args, fn, aftera, afterb) {
         assert.deepEqual(b, afterb)
       })
     } else {
-      it('should return as deeply equal', function(){
+      it('a and b should be deeply equal', function(){
         assert.deepEqual(a, b, 'a and b are not deeply equal')
       })
     }
