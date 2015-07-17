@@ -1,4 +1,32 @@
-/* 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: jsocopy.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: jsocopy.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* 
  * The MIT License
  *
  * Copyright 2015 Erich.
@@ -23,16 +51,26 @@
  */
 
 var NATIVECODE_REGEX = /^function(?:\s+\w+)?\((?:\s*\w+(?:\s*,\s*\w+)*)?\)\s*\{\s*\[native code\]/
-  , MAX_DEPTH = Number.MAX_SAFE_INTEGER
-  , _slice = Array.prototype.slice
+  // , MAX_DEPTH = Number.MAX_SAFE_INTEGER
+  // , _slice = Array.prototype.slice
   , getNames = Object.getOwnPropertyNames
   , setProp = Object.defineProperty
   , getProp = Object.getOwnPropertyDescriptor
   , create = Object.create
 
+/** @module jsoCopy */
+
+/** a callback used in many of the copy methods
+  *
+  * @callback definer
+  * @param {object} propertyDefinition  - the property definition
+  * @param {string} propertyName        - the property name
+  */
+
 ; module.exports = copy
 ; copy.create = _create
-; copy.deep = copyDeep
+; copy.copy = copy
+; copy.deep = deep
 ; copy.clone = clone
 ; copy.merge = merge
 
@@ -44,11 +82,24 @@ var NATIVECODE_REGEX = /^function(?:\s+\w+)?\((?:\s*\w+(?:\s*,\s*\w+)*)?\)\s*\{\
 })
 */
 
+/** makes a copy of a javascript object or value
+  * 
+  * @param  {object}      a   - the object to copy
+  * @param  {?definer}   cb   - optional definer callback
+  * @returns {object}         - the copy of a
+  */
 function copy (a, cb) {
-  return copyDeep(a, 0, cb)
+  return deep(a, 0, cb)
 }
 
-function copyDeep (a, md, cb) {
+/** makes a deep copy of a javascript object or value
+  * 
+  * @param  {object}      a   - the object to copy
+  * @param  {?int}       md   - maximum depth of copy
+  * @param  {?definer}   cb   - definer callback
+  * @returns {object}         - the copy of a
+  */
+function deep (a, md, cb) {
   var stack, names, b, i, j, n, o, p, q
   ; if (md instanceof Function) cb = md
   ; if (md !== (md | 0)) md = -1
@@ -80,6 +131,12 @@ function copyDeep (a, md, cb) {
   return a
 }
 
+/** makes a clone of a javascript object or value
+  * 
+  * @param  {object}      a   - the object to clone
+  * @param  {?definer}   cb   - definer callback
+  * @returns {object}         - the copy of a
+  */
 function clone (a, cb) {
   var stack, args, srcCache, dstCache, names, b, c, d, i, j, k, n, o, q
   ; if (a instanceof Object) {
@@ -100,7 +157,7 @@ function clone (a, cb) {
       ; i = 0
       ; while ((n = names[i++]) !== undefined) {
         if ((o = (d = getProp(a, n)).value) instanceof Object) {
-          if ((k = srcCache.indexOf(o)) < 0) {
+          if ((k = srcCache.indexOf(o)) &lt; 0) {
             q = ((q = o.constructor) === Object) ? {}
               : (q === Array) ? []
               : NATIVECODE_REGEX.test(q.toString()) ? new o.constructor(o)
@@ -136,7 +193,7 @@ function clonecb (a, cb) {
       ; i = 0
       ; while ((n = names[i++]) !== undefined) {
         if ((o = (p = getProp(a, n)).value) instanceof Object) {
-          if ((k = srcCache.indexOf(o)) < 0) {
+          if ((k = srcCache.indexOf(o)) &lt; 0) {
             q = ((q = o.constructor) === Object) ? {}
               : (q === Array) ? []
               : NATIVECODE_REGEX.test(q.toString()) ? new o.constructor(o)
@@ -154,11 +211,19 @@ function clonecb (a, cb) {
   return a
 }
 
-function merge () {
+/** merges javascript objects
+  * 
+  * @param  {object}      a     - the object to merge from
+  * @param  {object}          b     - the object to merge to
+  * @param  {?int}       md     - maximum depth of copy
+  * @param  {?definer}   cb     - definer callback
+  * @returns {object}           - the copy of a
+  */
+function merge (a, b) {
   var i = arguments.length - 1
     , md = 0
-    , cb, a, b, t
-  ; if (i >= 2 && (arguments[i] instanceof Function || arguments[i] == null)) cb = arguments[i--]
+    , cb, t
+  ; if (i >= 2 &amp;&amp; (arguments[i] instanceof Function || arguments[i] == null)) cb = arguments[i--]
   ; if (i >= 2) {
     if (arguments[i] === true) {
       md = -1
@@ -167,7 +232,7 @@ function merge () {
       md = arguments[i--]
     }
   }
-  ; if (i < 1) throw new Error('expects at least 2 operands')
+  ; if (i &lt; 1) throw new Error('expects at least 2 operands')
   ; t = typeof (b = arguments[i])
   ; if (cb instanceof Function) {
     while (i--) {
@@ -187,11 +252,11 @@ function merge () {
   function _merge (a, b) {
     var names, c, d, e, j, n, v, u
     // ; if ((a = d.value) === b) throw new Error('a === b')
-    ; if (a !== b && a instanceof Object) {
+    ; if (a !== b &amp;&amp; a instanceof Object) {
       c = (names = getNames(a)).length
       ; j = -1
       ; if (md--) {
-        while (++j < c) {
+        while (++j &lt; c) {
           if ((v = (d = getProp(a, n = names[j])).value) instanceof Object) {
             if ( ! b.hasOwnProperty(n)
                 || ! ((u = (e = getProp(b, n)).value) instanceof Object)) {
@@ -202,7 +267,7 @@ function merge () {
           setProp(b, n, d)
         }
       } else {
-        while (++j < c) setProp(b, n = names[j], getProp(a, n))
+        while (++j &lt; c) setProp(b, n = names[j], getProp(a, n))
       }
       return b
     }
@@ -212,11 +277,11 @@ function merge () {
   function _mergecb (a, b) {
     var names, c, d, e, j, n, v, u
     // ; if ((a = d.value) === b) throw new Error('a === b')
-    ; if (a !== b && a instanceof Object) {
+    ; if (a !== b &amp;&amp; a instanceof Object) {
       ; c = (names = getNames(a)).length
       ; j = -1
       ; if (md--) {
-        while (++j < c) {
+        while (++j &lt; c) {
           if ((v = (d = getProp(a, n = names[j])).value) instanceof Object) {
             if ( ! b.hasOwnProperty(n)
                 || ! ((u = (e = getProp(b, n)).value) instanceof Object)) {
@@ -228,7 +293,7 @@ function merge () {
           setProp(b, n, d)
         }
       } else {
-        while (++j < c) {
+        while (++j &lt; c) {
           if (cb(d = getProp(a, n), n) !== false) setProp(b, n = names[j], d)
         }
       }
@@ -239,9 +304,37 @@ function merge () {
 
 }
 
+/** creates an object of the same type
+  * 
+  * @param  {object}      a     - the object of the type to create
+  * @returns {object}           - the creation
+  */
 function _create(a) {
   var c
   ; return a instanceof Object ? (((c = a.constructor) === Object) ? {} : (c === Array) ? []
         : NATIVECODE_REGEX.test(c.toString()) ? new c(a)
         : create(a)) : a
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-jsoCopy.html">jsoCopy</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.1</a> on Fri Jul 17 2015 13:33:14 GMT+0800 (Malay Peninsula Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

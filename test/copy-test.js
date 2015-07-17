@@ -1,5 +1,5 @@
 var toTest = require('./lib/do-test.js')
-  , copy = require('../src/copy.js')
+  , copy = require('../src/jsocopy.js')
   , merge = copy.merge
   , testdata, testcases, methname
 
