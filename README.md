@@ -1,6 +1,8 @@
 # jso-copy
 Javascript Object copy tools
 
+a common toolset for copy, cloning and merging objects.
+
 node usage:
 ```javascript
 var jsoCopy = require('jsocopy.js') // or 'jsocopy.min.ja'
