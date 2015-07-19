@@ -1,0 +1,799 @@
+
+[0m[0m
+[0m  copy[0m
+[2K[0G  [32m  √[0m[90m should be a function[0m
+[0m    b = copy({"a":1,"b":2,"c":3}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy([0,1,2,3,4,5,6,7,8,9], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy("constructor:RegExp(/\\w+/gim)", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy("2015-07-19T05:22:16.651Z", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy({}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy({}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy(1, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy(1.1, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy("a string", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy(true, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy([[0,1,2,3,4],[5,6,7,8,9]], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy([[0,1,2,3,4],[0,1,2,3,4]], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+
+[0m  copy.deep[0m
+[2K[0G  [32m  √[0m[90m should be a function[0m
+[0m    b = copy.deep({"a":1,"b":2,"c":3}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([0,1,2,3,4,5,6,7,8,9], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("constructor:RegExp(/\\w+/gim)", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("2015-07-19T05:22:16.652Z", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(1, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(1.1, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("a string", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(true, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([[0,1,2,3,4],[5,6,7,8,9]], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([[0,1,2,3,4],[0,1,2,3,4]], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"a":1,"b":2,"c":3}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([0,1,2,3,4,5,6,7,8,9], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("constructor:RegExp(/\\w+/gim)", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("2015-07-19T05:22:16.652Z", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(1, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(1.1, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("a string", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(true, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([[0,1,2,3,4],[5,6,7,8,9]], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([[0,1,2,3,4],[0,1,2,3,4]], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"a":1,"b":2,"c":3}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([0,1,2,3,4,5,6,7,8,9], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("constructor:RegExp(/\\w+/gim)", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("2015-07-19T05:22:16.652Z", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(1, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(1.1, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep("a string", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep(true, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([[0,1,2,3,4],[5,6,7,8,9]], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep([[0,1,2,3,4],[0,1,2,3,4]], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.deep({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+
+[0m  copy.clone[0m
+[2K[0G  [32m  √[0m[90m should be a function[0m
+[0m    b = copy.clone({"a":1,"b":2,"c":3}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([0,1,2,3,4,5,6,7,8,9], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("constructor:RegExp(/\\w+/gim)", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("2015-07-19T05:22:16.652Z", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(1, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(1.1, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("a string", )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(true, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([[0,1,2,3,4],[5,6,7,8,9]], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([[0,1,2,3,4],[0,1,2,3,4]], )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, )[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"a":1,"b":2,"c":3}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([0,1,2,3,4,5,6,7,8,9], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("constructor:RegExp(/\\w+/gim)", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("2015-07-19T05:22:16.652Z", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(1, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(1.1, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("a string", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(true, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([[0,1,2,3,4],[5,6,7,8,9]], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([[0,1,2,3,4],[0,1,2,3,4]], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"a":1,"b":2,"c":3}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([0,1,2,3,4,5,6,7,8,9], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("constructor:RegExp(/\\w+/gim)", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("2015-07-19T05:22:16.652Z", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(1, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(1.1, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone("a string", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone(true, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([[0,1,2,3,4],[5,6,7,8,9]], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone([[0,1,2,3,4],[0,1,2,3,4]], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = copy.clone({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+
+[0m  merge[0m
+[2K[0G  [32m  √[0m[90m should be a function[0m
+[0m    b = merge({"a":1,"b":2,"c":3}, {})[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([0,1,2,3,4,5,6,7,8,9], [])[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge("2015-07-19T05:22:16.652Z", "2015-07-19T05:22:16.652Z")[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({}, {})[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({}, {})[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(1, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(1.1, 1.1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge("a string", "a string")[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(true, true)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([[0,1,2,3,4],[5,6,7,8,9]], [])[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, {})[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([[0,1,2,3,4],[0,1,2,3,4]], [])[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, {})[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"a":1,"b":2,"c":3}, {}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([0,1,2,3,4,5,6,7,8,9], [], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge("2015-07-19T05:22:16.652Z", "2015-07-19T05:22:16.652Z", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({}, {}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({}, {}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(1, 1, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(1.1, 1.1, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge("a string", "a string", 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(true, true, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([[0,1,2,3,4],[5,6,7,8,9]], [], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, {}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([[0,1,2,3,4],[0,1,2,3,4]], [], 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, {}, 1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"a":1,"b":2,"c":3}, {}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([0,1,2,3,4,5,6,7,8,9], [], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge("2015-07-19T05:22:16.652Z", "2015-07-19T05:22:16.652Z", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({}, {}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({}, {}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(1, 1, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(1.1, 1.1, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge("a string", "a string", -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge(true, true, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([[0,1,2,3,4],[5,6,7,8,9]], [], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"first":{"a":1,"b":2,"c":3},"second":{"a":4,"b":5,"c":6}}, {}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge([[0,1,2,3,4],[0,1,2,3,4]], [], -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+[0m    b = merge({"first":{"a":1,"b":2,"c":3},"second":{"a":1,"b":2,"c":3}}, {}, -1)[0m
+[2K[0G    [32m  √[0m[90m should have same constructor [0m
+[2K[0G    [32m  √[0m[90m should deepEqual __proto__`s [0m
+[2K[0G    [32m  √[0m[90m should have same __proto__.constructor [0m
+[2K[0G    [32m  √[0m[90m should not be the same object[0m
+[2K[0G    [32m  √[0m[90m a and b should be deeply equal[0m
+
+
+[92m [0m[32m 649 passing[0m[90m (941ms)[0m
+
