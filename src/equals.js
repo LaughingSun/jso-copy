@@ -1,8 +1,42 @@
-var pSlice = Array.prototype.slice;
-var objectKeys = require('./lib/keys.js');
-var isArguments = require('./lib/is_arguments.js');
+/* ruthlessly lifted from https://github.com/substack/node-deep-equal to add deepEqual feature. 
+ * TODO: evaluate if this needs to be rewritten or we should just keep it and add credit where credit is due.
+*/
 
-var deepEqual = module.exports = function (actual, expected, opts) {
+var pSlice = Array.prototype.slice
+  , objectKeys = (function (){
+    return typeof Object.keys === 'function'
+      ? Object.keys : shim;
+    
+    function shim (obj) {
+      var keys = [];
+      for (var key in obj) keys.push(key);
+      return keys;
+    }
+    })()
+  , isArguments = (function (){
+  
+    return supported(arguments) ? supported : unsupported;
+  
+    function supported(object) {
+      return Object.prototype.toString.call(object) == '[object Arguments]';
+    }
+    
+    function unsupported(object){
+      return object &&
+        typeof object == 'object' &&
+        typeof object.length == 'number' &&
+        Object.prototype.hasOwnProperty.call(object, 'callee') &&
+        !Object.prototype.propertyIsEnumerable.call(object, 'callee') ||
+        false;
+    }
+    
+  })()
+  ;
+  
+module.exports = deepEquals
+deepEquals.not = function notDeepEquals () { return ! deepEquals.apply(this, arguments) }
+  
+function deepEquals (actual, expected, opts) {
   if (!opts) opts = {};
   // 7.1. All identical values are equivalent, as determined by ===.
   if (actual === expected) {
