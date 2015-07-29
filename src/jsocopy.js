@@ -45,6 +45,7 @@ var NATIVECODE_REGEX = /^function(?:\s+\w+)?\((?:\s*\w+(?:\s*,\s*\w+)*)?\)\s*\{\
 ; copy.deep = deep
 ; copy.clone = clone
 ; copy.merge = merge
+; copy.deepEquals = require('./equals.js')
 
 /*@TODO: I think that __proto__`s treated differently, currently it can
  ^ fail on non native constructed items
